@@ -1,0 +1,13 @@
+python main.py \
+  --dataset_file dota \              # 数据集名称（对应datasets/dota.py）
+  --num_classes 15 \                 # DOTA的15类目标
+  --coco_path E:/DOTA \              # DOTA根路径（含train/test文件夹）
+  --batch_size 3 \                   # 笔记本GPU显存不足时设为1
+  --epochs 5 \                      # 快速实验训练50轮
+  --lr 2e-2 \                        # 降低学习率防止过拟合
+  --lr_backbone 1e-2 \               # backbone学习率
+  --backbone resnet18 \              # 使用轻量级骨干网络
+  --num_queries 20\                 # 查询数量减少至50（默认100）
+  --output_dir ./dota_detr_results \ # 输出路径
+  --device cuda \                    # 若用CPU改为cpu
+  --remove_difficult                # 过滤difficult=1的样本
