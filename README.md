@@ -1,3 +1,4 @@
+本项目采用DETR原模型，但数据集更换为卫星影像DOTAv1.0
 **DE⫶TR**: End-to-End Object Detection with Transformers
 ========
 
